@@ -88,6 +88,9 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("nombre-error").textContent = "";
             nombre.classList.remove("is-invalid");
             nombre.classList.add("is-valid");
+        } else {
+            nombre.classList.remove("is-valid");
+            nombre.classList.add("is-invalid");
         }
     });
 
