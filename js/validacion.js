@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let valid = true;
 
         if (nombre.value.trim() === "") {
-            document.getElementById("nombre-error").textContent = "El campo 'Nombre' no puede estar vacío.";
+            document.getElementById("nombre-error").textContent = "Debe ingresar un nombre";
             nombre.classList.add("is-invalid");
             valid = false;
         } else {
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (apellido.value.trim() === "") {
-            document.getElementById("apellido-error").textContent = "El campo 'Apellido' no puede estar vacío.";
+            document.getElementById("apellido-error").textContent = "Debe ingresar un apellido";
             apellido.classList.add("is-invalid");
             valid = false;
         } else {
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (email.value.trim() === "" || !isValidEmail(email.value)) {
-            document.getElementById("email-error").textContent = "El campo 'Email' debe ser válido y no puede estar vacío.";
+            document.getElementById("email-error").textContent = "Debe ingresar un email";
             email.classList.add("is-invalid");
             valid = false;
         } else {
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (password1.value.length < 6) {
-            document.getElementById("password1-error").textContent = "La contraseña debe tener al menos 6 caracteres.";
+            document.getElementById("password1-error").textContent = "Debe ingresar una contraseña con al menos 6 caracteres.";
             password1.classList.add("is-invalid");
             valid = false;
         } else {
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (password1.value !== password2.value) {
-            document.getElementById("password2-error").textContent = "Las contraseñas no coinciden.";
+            document.getElementById("password2-error").textContent = "Debe ser igual a contraseña";
             password2.classList.add("is-invalid");
             valid = false;
         } else {
