@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             document.getElementById("nombre-error").textContent = "";
             nombre.classList.remove("is-invalid");
+            nombre.classList.add("is-valid");
         }
 
         if (apellido.value.trim() === "") {
@@ -28,15 +29,17 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             document.getElementById("apellido-error").textContent = "";
             apellido.classList.remove("is-invalid");
+            apellido.classList.add("is-valid");
         }
 
         if (email.value.trim() === "" || !isValidEmail(email.value)) {
-            document.getElementById("email-error").textContent = "Debe ingresar un email";
+            document.getElementById("email-error").textContent = "Debe ingresar un email válido";
             email.classList.add("is-invalid");
             valid = false;
         } else {
             document.getElementById("email-error").textContent = "";
             email.classList.remove("is-invalid");
+            email.classList.add("is-valid");
         }
 
         if (password1.value.length < 6) {
@@ -46,15 +49,17 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             document.getElementById("password1-error").textContent = "";
             password1.classList.remove("is-invalid");
+            password1.classList.add("is-valid");
         }
 
         if (password1.value !== password2.value) {
-            document.getElementById("password2-error").textContent = "Debe ser igual a contraseña";
+            document.getElementById("password2-error").textContent = "Debe ser igual a la contraseña";
             password2.classList.add("is-invalid");
             valid = false;
         } else {
             document.getElementById("password2-error").textContent = "";
             password2.classList.remove("is-invalid");
+            password2.classList.add("is-valid");
         }
 
         if (!terminos.checked) {
@@ -78,6 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (nombre.value.trim() !== "") {
             document.getElementById("nombre-error").textContent = "";
             nombre.classList.remove("is-invalid");
+            nombre.classList.add("is-valid");
         }
     });
 
@@ -85,6 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (apellido.value.trim() !== "") {
             document.getElementById("apellido-error").textContent = "";
             apellido.classList.remove("is-invalid");
+            apellido.classList.add("is-valid");
         }
     });
 
@@ -92,6 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (isValidEmail(email.value)) {
             document.getElementById("email-error").textContent = "";
             email.classList.remove("is-invalid");
+            email.classList.add("is-valid");
         }
     });
 
@@ -99,6 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (password1.value.length >= 6) {
             document.getElementById("password1-error").textContent = "";
             password1.classList.remove("is-invalid");
+            password1.classList.add("is-valid");
         }
     });
 
@@ -106,14 +115,16 @@ document.addEventListener("DOMContentLoaded", function () {
         if (password2.value === password1.value) {
             document.getElementById("password2-error").textContent = "";
             password2.classList.remove("is-invalid");
+            password2.classList.add("is-valid");
         }
+       
     });
 
     terminos.addEventListener("change", function () {
         if (terminos.checked) {
             document.getElementById("terminos-error").textContent = "";
         } else {
-            document.getElementById("terminos-error").textContent = "Debes aceptar los términos y condiciones.";
+            document.getElementById("terminos-error").textContent = "Debes aceptar los términos del servicio.";
         }
     });
 });

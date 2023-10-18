@@ -18,28 +18,68 @@
                     <div class="row g-3">
                         <div class="col-sm-6">
                             <label for="nombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="nombre">
-                            <div class="error-message" id="nombre-error"></div>
+                            <div class="input-group has-validation">
+                                <input type="text" class="form-control" id="nombre">
+                                <div class="valid-feedback">
+                                  <i class="bi bi-check-circle-fill text-success"></i>
+                                </div>
+                                <div class="invalid-feedback">
+                                  <i class="bi bi-exclamation-circle-fill text-danger"></i>
+                                </div>
+                            </div>
+                            <div class="error-message text-danger" id="nombre-error"></div>
                         </div>
                         <div class="col-sm-6">
-                            <label for= "apellido" class="form-label">Apellido</label>
-                            <input type="text" class= "form-control" id="apellido">
-                            <div class="error-message" id="apellido-error"></div>
+                            <label for="apellido" class="form-label">Apellido</label>
+                            <div class="input-group has-validation">
+                                <input type="text" class="form-control" id="apellido">
+                                <div class="valid-feedback">
+                                  <i class="bi bi-check-circle-fill text-success"></i>
+                                </div>
+                                <div class="invalid-feedback">
+                                  <i class="bi bi-exclamation-circle-fill text-danger"></i>
+                                </div>
+                            </div>
+                            <div class="error-message text-danger" id="apellido-error"></div>
                         </div>
                         <div class="col-12">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email">
-                            <div class="error-message" id="email-error"></div>
+                            <div class="input-group has-validation">
+                                <input type="email" class="form-control" id="email">
+                                <div class="valid-feedback">
+                                  <i class="bi bi-check-circle-fill text-success"></i>
+                                </div>
+                                <div class="invalid-feedback">
+                                  <i class="bi bi-exclamation-circle-fill text-danger"></i>
+                                </div>
+                            </div>
+                            <div class="error-message text-danger" id="email-error"></div>
                         </div>
                         <div class="col-sm-6">
                             <label for="password1" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="password1">
-                            <div class="error-message" id="password1-error"></div>
+                            <div class="input-group has-validation">
+                                <input type="password" class="form-control" id="password1">
+                                <div class="valid-feedback">
+                                  <i class="bi bi-check-circle-fill text-success"></i>
+                                </div>
+                                <div class="invalid-feedback">
+                                  <i class="bi bi-exclamation-circle-fill text-danger"></i>
+                                </div>
+                            </div>
+                            <div class="error-message text-danger" id="password1-error"></div>
                         </div>
                         <div class="col-sm-6">
                             <label for="password2" class="form-label">Repetir contraseña</label>
-                            <input type="password" class="form-control" id="password2">
-                            <div class="error-message" id="password2-error"></div>
+                            <div class="input-group has-validation">
+                                <input type="password" class="form-control" id="password2">
+                                <div class="valid-feedback">
+                                  <i class="bi bi-check-circle-fill text-success"></i>
+                                </div>
+                                <div class="invalid-feedback">
+                                  <i class="bi bi-exclamation-circle-fill text-danger"></i>
+                                </div>
+                            </div>
+                            <div class="error-message text-danger" id="password2-error"></div>
                         </div>
                         <div class="col-sm-12">
                             <button type="button" class="btn btn-link ps-0" data-bs-toggle="modal" data-bs-target="#modalTerminos">Términos del servicio</button>
