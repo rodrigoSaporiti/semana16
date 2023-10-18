@@ -125,9 +125,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     terminos.addEventListener("change", function () {
+        const terminosLabel = document.getElementById("terminos-label");
+    
         if (terminos.checked) {
+            terminosLabel.classList.remove("text-danger");
+            terminosLabel.classList.add("text-success");
             document.getElementById("terminos-error").textContent = "";
         } else {
+            terminosLabel.classList.remove("text-success");
+            terminosLabel.classList.add("text-danger");
             document.getElementById("terminos-error").textContent = "Debes aceptar los términos del servicio.";
         }
     });
