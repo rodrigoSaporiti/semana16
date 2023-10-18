@@ -52,7 +52,11 @@ document.addEventListener("DOMContentLoaded", function () {
             password1.classList.add("is-valid");
         }
 
-        if (password1.value !== password2.value) {
+        if (password2.value.length < 1) {
+            document.getElementById("password2-error").textContent = "La contraseña no puede estar vacía";
+            password2.classList.add("is-invalid");
+            valid = false;
+        } else if (password1.value !== password2.value) {
             document.getElementById("password2-error").textContent = "Debe ser igual a la contraseña";
             password2.classList.add("is-invalid");
             valid = false;
